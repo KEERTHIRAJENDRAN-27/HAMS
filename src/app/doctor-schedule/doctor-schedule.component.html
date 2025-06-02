@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+
+<body>
+
+  <header>
+    Doctor Dashboard
+  </header>
+
+  <main class="container">
+    <section class="card profile">
+      <h2>Doctor Profile</h2>
+      <p><strong>ID:</strong> 994</p>
+      <p><strong>Name:</strong> Dr. Nair</p>
+      <p><strong>Specialization:</strong> Oncologist</p>
+    </section>
+
+    <section class="card schedule">
+      <h2>Update Availability</h2>
+      <form>
+        <label>Available Days:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="days" value="Monday"> Monday</label>
+          <label><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
+          <label><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
+          <label><input type="checkbox" name="days" value="Thursday"> Thursday</label>
+          <label><input type="checkbox" name="days" value="Friday"> Friday</label>
+          <label><input type="checkbox" name="days" value="Saturday"> Saturday</label>
+        </div>
+
+        <label for="time">Available Time:</label>
+        <input type="text" id="time" name="time" placeholder="e.g., 09:30 - 17:30" required>
+
+        <button type="submit">Update Schedule</button>
+      </form>
+    </section>
+  </main>
+
+</body>

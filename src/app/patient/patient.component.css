@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+ 
+/* body {
+  background-color: #f8f9fa;
+  color: #1d3557;
+} */
+
+body {
+  background-image: url('https://images.pexels.com/photos/6010792/pexels-photo-6010792.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-6010792.jpg&fm=jpg'); /* Replace with your image path or URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Optional: keeps the image fixed during scroll */
+  font-family: "Segoe UI", sans-serif;
+  height:100vh;
+}
+
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 200px 200px ; 
+}
+
+/* .card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 17px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s;
+  text-align: center;
+} */
+
+.card {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 1px 17px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+ 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+ 
+.card button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+ 
+.card button:hover {
+  background-color: #1d3557;
+}
+ 
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ 

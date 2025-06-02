@@ -1,0 +1,15 @@
+.doctor-card {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card .doctor-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}

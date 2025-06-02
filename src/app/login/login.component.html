@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="login-content">
+        <h2>RK Hospital Login</h2>
+        <form #loginform="ngForm" (ngSubmit)="validateL(loginform)" >
+          <label for="username">Username</label>
+          <input ngModel type="text" id="username" name="username" required />
+ 
+          <label for="password">Password</label>
+          <input ngModel type="password" id="password" name="password" required />
+ 
+          <button type="submit">Login</button>
+        </form>
+        <p class="register-link">Don't have an account? <a href="register">Register here</a></p>
+      </div>
+    </div>
+    <div class="login-image"></div>
+  </div>
+</body>
+</html>
+ 

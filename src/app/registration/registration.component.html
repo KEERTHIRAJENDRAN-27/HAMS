@@ -1,0 +1,32 @@
+
+<body>
+  <div class="container">
+    <div class="form-image">
+<img src="https://mydoctorhealthcare.com/wp-content/uploads/2024/04/doctor-at-home-1.jpg" alt="Hospital Illustration">
+    </div>
+    <div class="form-container">
+      <h2>RK Hospital Registration</h2>
+      <form #RegistrationForm="ngForm" (ngSubmit)="validateR(RegistrationForm)" action="/register" method="post">
+        <label for="username">Username</label>
+        <input ngModel  type="text" id="username" name="name" required>
+ 
+        <label for="email">Email</label>
+        <input ngModel type="email" id="email" name="email" required>
+ 
+        <label for="password">Password</label>
+        <input ngModel  type="password" id="password" name="password" required>
+ 
+        <label for="role">Role</label>
+        <select ngModel  id="role" name="roles" required>
+          <option value="" disabled selected>Select role</option>
+          <option value="admin">ADMIN</option>
+          <option value="doctor">DOCTOR</option>
+          <option value="patient">PATIENT</option>
+        </select>
+ 
+        <button type="submit">Register</button>
+      </form>
+      <p class="login-text">Already have an account? <a href="login">Login here</a></p>
+    </div>
+  </div>
+</body>

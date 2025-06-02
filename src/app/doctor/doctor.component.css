@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* body {
+    background-color: #313941;     
+  } */
+  
+  
+  body {
+    background-image: url('https://images.unsplash.com/photo-1674702727317-d29b2788dc4a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: "Segoe UI", sans-serif;
+    height:100vh;    
+  }
+
+  .dashboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 100px 100px; 
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.6); 
+    /* background-color: #ffffff; */
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 1px 17px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 250px;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .card button {
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card button:hover {
+    background-color: #1d3557;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 1024px) {
+    .dashboard {
+      padding: 80px 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+  
+    .card {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card h1 {
+      font-size: 24px;
+    }
+  
+    .card h2 {
+      font-size: 18px;
+    }
+  
+    .card button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  

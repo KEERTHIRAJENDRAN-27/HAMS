@@ -1,0 +1,74 @@
+.image-container {
+  position: relative;
+  width: 87vw;
+  max-width: 1250px;
+  height: auto;
+  margin-bottom: -5px; /* Overlap with next section slightly */
+}
+ 
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+ 
+.book-btn {
+  position: absolute;
+  bottom: 13%;
+  right: 8%;
+  font-size: 1.2vw;
+  padding: 0.8vw 1.5vw;
+}
+ 
+/* Main section background */
+.main-services-section {
+  background-color: #3f94a8;
+  margin-top: -50px;
+  padding-top: 100px; 
+  padding-bottom: 40px;
+}
+
+/* Mother & Child Care */
+.card-mother {
+  background-color: #d6e6ff;
+  color: #4a4a4a;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Diagnostics & Lab */
+.card-diagnostics {
+  background-color: #d7f9f8;
+  color: #3a3a3a;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 24/7 Emergency */
+.card-emergency {
+  background-color: #eac4d5;
+  color: #5a2a2a;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Teleconsultation */
+.card-teleconsult {
+  background-color: #e5d4ef;
+  color: #3d4d3d;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+<p>patient-profile works!</p>
+<body>
+  <div class="container">
+    <h1>Patient Profile Management</h1>
+    <form #savePatient="ngForm" (ngSubmit)="save(savePatient)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" ngModel name="name" required />
+ 
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="Enter your age"  ngModel name="age" required />
+ 
+      <label for="bloodGroup">Blood Group:</label>
+      <input type="text" id="bloodGroup" placeholder="e.g. A+, B-, O+" ngModel name="bloodGroup" required />
+ 
+      <label for="gender" >Gender:</label>
+      <select id="gender" ngModel name="gender" required>
+        <option value="">Select gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+ 
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" value="1988-12-27" ngModel name="dateOfBirth"  required />
+ 
+      <label for="medicalHistory">Medical History:</label>
+      <textarea id="medicalHistory" rows="4" placeholder="Enter any relevant history" ngModel name="medicalHistory" ></textarea>
+ 
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" ngModel name="email"  required />
+ 
+      <label for="contactDetails">Contact Details:</label>
+      <input type="text" id="contactDetails" placeholder="Phone number or address" ngModel name="contactDetails" required />
+ 
+      <div class="buttons">
+        <button type="submit">Update Details</button>
+        <button type="reset" class="delete-btn">Delete Profile</button>
+      </div>
+    </form>
+  </div>
+</body>

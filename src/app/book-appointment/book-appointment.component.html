@@ -1,0 +1,60 @@
+
+<body>
+  <header>
+    <h1>Book an Appointment</h1>
+    <input type="text" id="searchBar" placeholder="Search by specialization..." onkeyup="filterDoctors()" />
+  </header>
+ 
+  <main class="main-container">
+    <aside class="filter">
+      <h3>Specializations</h3>
+      <ul>
+        <li onclick="filterBySpecialization('All')">All</li>
+        <li onclick="filterBySpecialization('Oncologist')">Oncologist</li>
+        <li onclick="filterBySpecialization('Cardiologist')">Cardiologist</li>
+        <li onclick="filterBySpecialization('Dermatologist')">Dermatologist</li>
+        <li onclick="filterBySpecialization('Pediatrician')">Pediatrician</li>
+      </ul>
+    </aside>
+ 
+    <section class="doctor-list" id="doctorList">
+      <div class="doctor-card" data-specialization="Oncologist">
+<img src="https://via.placeholder.com/100" alt="Dr. Nair" />
+        <h2>Dr. Nair</h2>
+        <p><strong>Specialization:</strong> Oncologist</p>
+        <p><strong>Available Days:</strong> Monday, Friday</p>
+        <p><strong>Available Time:</strong> 09:30 - 17:30</p>
+        <p><strong>Doctor ID:</strong> 994</p>
+        <button onclick="alert('Appointment booked with Dr. Nair')">Book Appointment</button>
+      </div>
+ 
+      <!-- Additional doctor cards can go here -->
+    </section>
+  </main>
+ 
+  <footer>
+    <p>© 2025 Hospital Appointment System</p>
+  </footer>
+ 
+  <script>
+    function filterBySpecialization(spec) {
+      const cards = document.querySelectorAll('.doctor-card');
+      cards.forEach(card => {
+        if (spec === 'All' || card.dataset.specialization === spec) {
+card.style.display = 'block';
+        } else {
+card.style.display = 'none';
+        }
+      });
+    }
+ 
+    function filterDoctors() {
+      const input = document.getElementById('searchBar').value.toLowerCase();
+      const cards = document.querySelectorAll('.doctor-card');
+      cards.forEach(card => {
+        const specialization = card.dataset.specialization.toLowerCase();
+card.style.display = specialization.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
