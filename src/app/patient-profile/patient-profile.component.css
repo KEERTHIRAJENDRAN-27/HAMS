@@ -1,61 +1,90 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AppointmentService {
-  private baseUrl = 'http://localhost:8002/appointment';
- 
-  constructor(private client: HttpClient) {}
- 
-  save(data: any): Observable<any> {
-    return this.client.post(`${this.baseUrl}/save`, { appointment: data }, {
-      headers: { 'Content-Type': 'application/json' },
-      responseType: 'text' as 'json'
-    });
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
   }
- 
-  getBookedAppointments(doctorId: number): Observable<any[]> {
-    return this.client.get<any[]>(`${this.baseUrl}/fetchByDoctorId/${doctorId}`);
+   
+  body {
+    background-color: #b0c0cf;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
   }
-
-    getByPatientId(patientId: number): Observable<any> {
-    return this.client.get(`http://localhost:8002/appointment/fetchByPatientId/${patientId}`
-    ,{
-      headers:{
-        'Accept':'application/json'
-      }
-    });
+   
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+   
+  .container h1 {
+    text-align: center;
+    color: #1d3557;
+    margin-bottom: 30px;
+  }
+   
+  form label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #333;
+    font-weight: bold;
+  }
+   
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+   
+  form textarea {
+    resize: vertical;
+  }
+   
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+   
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #457b9d;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+   
+  button:hover {
+    background-color: #1d3557;
+  }
+   
+  .delete-btn {
+    background-color: #e63946;
+  }
+   
+  .delete-btn:hover {
+    background-color: #c1121f;
+  }
+   
+  @media (max-width: 600px) {
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
     }
-    // http://localhost:8002/appointment/fetchByPatientId/24
-
-    updateAppointment(data: any): Observable<any> {
-      return this.client.put(`${this.baseUrl}/update/${data.id}`, data, {
-          headers: { 'Content-Type': 'application/json' },
-          responseType: 'text' as 'json'
-        });
-      }
-     
-    deleteAppointment(id: number): Observable<any> {
-    return this.client.delete(`http://localhost:8002/appointment/delete/${id}`,{responseType:'text'as'json'});
+   
+    button {
+      width: 100%;
     }
-}
- 
-
-export class Appointment {
-  patientId: number;
-  doctorId: number;
-  appointmentDateTime: string;
-  reason: string;
-  status: string;
-
-  constructor(patientId: number, doctorId: number, appointmentDateTime: string, reason: string, status: string) {
-    this.patientId = patientId;
-    this.doctorId = doctorId;
-    this.appointmentDateTime = appointmentDateTime;
-    this.reason = reason;
-    this.status = status;
   }
-}
+   
